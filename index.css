@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    list-style: none;
+
+}
+:root{ --Very-Light-Gray: hsl(0, 0%, 95%); 
+--Grayish-Blue: hsl(229, 6%, 66%);
+}
+img{
+    max-width: 100%;
+}
+body{
+    padding: 1rem;
+    max-width: 100%;
+}
+main{
+    max-width: 100%;
+    background-color:hsl(0, 0%, 95%);
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggel{
+    display: none;
+}
+.toggel-lable{
+    display: flex;
+}
+
+
+span,span::after,span::before{
+width: 25px;
+height:4px;
+background-color: rgb(57, 1, 71);
+position: relative;
+}
+span::after{
+    content: '';
+    position: absolute;
+    top: 7px;
+}
+span::before{
+    content: '';
+    position: absolute;
+    bottom: 7px;
+}
+@media only screen and (max-width: 2000px) and (min-width: 900px){
+
+    
+
+    .toggel-lable{
+        
+        display: none;
+    }
+    }
+.nav{
+   color: var(--Grayish-Blue);
+   font-size: 1.2rem;
+}
+ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+ul li{
+    padding: 10px;
+    border-radius: 7px;
+    transition: .3s ease-in-out;
+    cursor:pointer;
+}
+ul li:hover,.active{
+    color: white;
+    background: rgb(60, 1, 116);
+    }
+
+    .middle{
+        display: flex;
+        padding: 4rem 0;
+        align-items: center;   
+        
+     }
+     .text{
+         display: flex;
+         flex-direction: column;
+         gap: 2rem;
+         
+     }
+        .middle h1{
+            color: rgb(60, 1, 116);;
+            font-size: 3rem;
+            max-width: 85%;
+        }
+        .middle p{
+            font-size: 1.2rem;
+            max-width: 85%;
+            line-height: 2rem;
+
+        }
+        .middle .active{
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .middle  .email{
+           height: 2.8rem;
+           background-color: white;
+        }
+        .middle .bg{
+            font-size: 1rem;
+            background-color:rgb(60, 1, 116) ;
+            width: fit-content;
+            padding:  .3rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            color: var(--Grayish-Blue);
+            
+        }
+        .middle .bg a{color: white;}
+        .foot{
+            padding-top: 2rem;
+            display: flex;
+            gap:1.5rem;
+            flex-wrap: wrap;
+        }
+
+
+
+    @media only screen and (max-width: 900px){
+        .middle .em{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .container{
+           width:90% ;
+        }
+        .middle{
+            text-align: center;
+        }
+        .middle .image{
+            display: none;
+        }
+        .middle .text{
+            align-items: center;
+            
+        }
+        .middle h1{
+            font-size: 3rem;
+            max-width: 100%;
+        }
+        .middle p{
+            font-size: 1rem;
+            max-width: 100%;
+            line-height: 1.8rem;
+
+        }
+        header{
+            position: relative;
+        }
+        .nav{
+            display: none;
+            position: absolute;
+            background: var(--Very-Light-Gray);
+            width: 100%;
+            top:4rem;
+           
+
+            
+        }
+       
+        ul{
+            flex-direction: column;
+            
+        }
+        #toggel-lable:checked ~ .nav{
+            display: block;
+        }
+        
+
+    }
+    @media only screen and (max-width: 400px){
+        .container{
+            width:100% ;
+         }
+         
+         .middle{
+             text-align: center;
+         }
+        h1{
+            font-size: 2rem;
+
+        }
+    }
